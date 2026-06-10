@@ -1,0 +1,50 @@
+[
+  {
+    "id": "typefusion-atlas",
+    "name": "TypeFusion Atlas",
+    "description": "A TypeScript-powered personal engineering atlas for organizing projects, skills, learning logs, and career materials.",
+    "category": "career-system",
+    "techStack": ["TypeScript", "Zod", "Node.js"],
+    "status": "active",
+    "careerValues": ["portfolio", "learning"],
+    "resumeVisible": true,
+    "repositoryUrl": "https://github.com/TypeFusion/typefusion-atlas",
+    "sourceType": "original"
+  },
+  {
+    "id": "hearth-theme",
+    "name": "HearthTheme",
+    "description": "A warm-toned, low-glare theme family for code interfaces, with Ember and Moss variants for VS Code, Open VSX-compatible editors, and Obsidian.",
+    "category": "frontend-tool",
+    "techStack": ["JavaScript", "Astro", "CSS", "TypeScript"],
+    "status": "maintained",
+    "careerValues": ["portfolio", "resume"],
+    "resumeVisible": true,
+    "repositoryUrl": "https://github.com/hearth-code/HearthTheme",
+    "sourceType": "original"
+  },
+  {
+    "id": "vue3-drag-drop-tools",
+    "name": "Vue3 Drag Drop Tools",
+    "description": "A Vue 3 drag-and-drop configuration editor for building structured workflow tools.",
+    "category": "frontend-tool",
+    "techStack": ["Vue", "JavaScript"],
+    "status": "maintained",
+    "careerValues": ["portfolio", "resume"],
+    "resumeVisible": true,
+    "repositoryUrl": "https://github.com/TypeFusion/Vue3-Drag-Drop-Tools",
+    "sourceType": "original"
+  },
+  {
+    "id": "japan-api",
+    "name": "JapanAPI",
+    "description": "A Japan-focused API toolkit for foreign programmers, including coding challenge data and daily-life utilities.",
+    "category": "api-tool",
+    "techStack": ["Python"],
+    "status": "maintained",
+    "careerValues": ["portfolio", "resume"],
+    "resumeVisible": true,
+    "repositoryUrl": "https://github.com/TypeFusion/JapanAPI",
+    "sourceType": "original"
+  }
+]
