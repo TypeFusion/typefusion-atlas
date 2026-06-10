@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "validate": "tsx src/scripts/validate.ts"
   },
   "devDependencies": {
     "@types/node": "^25.9.2",
