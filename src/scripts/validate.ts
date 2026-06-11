@@ -1,6 +1,7 @@
 import { readFileSync } from "node:fs";
 import { ProfileSchema } from "../schemas/profile.js";
 import { ProjectsSchema } from "../schemas/project.js";
+import { SkillsSchema } from "../schemas/skill.js";
 
 const rawProfile = readFileSync("data/profile.json", "utf-8");
 const profile = JSON.parse(rawProfile);
@@ -12,5 +13,11 @@ const projects = JSON.parse(rawProjects);
 
 ProjectsSchema.parse(projects);
 
+const rawSkills = readFileSync("data/skills.json", "utf-8");
+const skills = JSON.parse(rawSkills);
+
+SkillsSchema.parse(skills);
+
 console.log("Profile data is valid.");
 console.log("Projects data is valid.");
+console.log("Skills data is valid.");

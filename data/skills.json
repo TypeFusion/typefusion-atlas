@@ -1,0 +1,38 @@
+[
+  {
+    "name": "TypeScript",
+    "category": "language",
+    "level": "learning",
+    "evidence": ["typefusion-atlas", "hearth-theme"]
+  },
+  {
+    "name": "Zod",
+    "category": "validation",
+    "level": "comfortable",
+    "evidence": ["typefusion-atlas"]
+  },
+  {
+    "name": "Vue",
+    "category": "framework",
+    "level": "comfortable",
+    "evidence": ["vue3-drag-drop-tools"]
+  },
+  {
+    "name": "Python",
+    "category": "language",
+    "level": "comfortable",
+    "evidence": ["japan-api"]
+  },
+  {
+    "name": "CSS",
+    "category": "styling",
+    "level": "comfortable",
+    "evidence": ["hearth-theme"]
+  },
+  {
+    "name": "Node.js",
+    "category": "runtime",
+    "level": "comfortable",
+    "evidence": ["typefusion-atlas"]
+  }
+]
