@@ -1,8 +1,8 @@
-import { readFileSync, writeFileSync } from "node:fs";
+import { writeFileSync } from "node:fs";
+import { readJsonFile } from "../lib/read-json.js";
 import { ProjectsSchema } from "../schemas/project.js";
 
-const rawProjects = readFileSync("data/projects.json", "utf-8");
-const projects = ProjectsSchema.parse(JSON.parse(rawProjects));
+const projects = readJsonFile("data/projects.json", ProjectsSchema);
 
 const lines = [
   "# Project Index",
