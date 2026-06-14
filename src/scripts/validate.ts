@@ -11,13 +11,22 @@ ProfileSchema.parse(profile);
 const rawProjects = readFileSync("data/projects.json", "utf-8");
 const projects = JSON.parse(rawProjects);
 
-ProjectsSchema.parse(projects);
+const validatedProjects = ProjectsSchema.parse(projects);
 
 const rawSkills = readFileSync("data/skills.json", "utf-8");
 const skills = JSON.parse(rawSkills);
 
-SkillsSchema.parse(skills);
-
+const validatedSkills = SkillsSchema.parse(skills);
+const projectIds = new Set(validatedProjects.map((p) => p.id));
+for (const skill of validatedSkills) {
+  for (const projectId of skill.evidence) {
+    if (!projectIds.has(projectId)) {
+      throw new Error(
+        `Skill "${skill.name}" references unknown project id "${projectId}".`,
+      );
+    }
+  }
+}
 console.log("Profile data is valid.");
 console.log("Projects data is valid.");
 console.log("Skills data is valid.");
