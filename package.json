@@ -6,7 +6,8 @@
   "scripts": {
     "typecheck": "tsc --noEmit",
     "validate": "tsx src/scripts/validate.ts",
-    "generate:project-index": "tsx src/scripts/generate-project-index.ts"
+    "generate:project-index": "tsx src/scripts/generate-project-index.ts",
+    "generate:skill-map": "tsx src/scripts/generate-skill-map.ts"
   },
   "devDependencies": {
     "@types/node": "^25.9.2",
