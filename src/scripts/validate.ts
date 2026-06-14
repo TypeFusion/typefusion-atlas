@@ -1,22 +1,12 @@
-import { readFileSync } from "node:fs";
+import { readJsonFile } from "../lib/read-json.js";
 import { ProfileSchema } from "../schemas/profile.js";
 import { ProjectsSchema } from "../schemas/project.js";
 import { SkillsSchema } from "../schemas/skill.js";
 
-const rawProfile = readFileSync("data/profile.json", "utf-8");
-const profile = JSON.parse(rawProfile);
+readJsonFile("data/profile.json", ProfileSchema);
+const validatedProjects = readJsonFile("data/projects.json", ProjectsSchema);
+const validatedSkills = readJsonFile("data/skills.json", SkillsSchema);
 
-ProfileSchema.parse(profile);
-
-const rawProjects = readFileSync("data/projects.json", "utf-8");
-const projects = JSON.parse(rawProjects);
-
-const validatedProjects = ProjectsSchema.parse(projects);
-
-const rawSkills = readFileSync("data/skills.json", "utf-8");
-const skills = JSON.parse(rawSkills);
-
-const validatedSkills = SkillsSchema.parse(skills);
 const projectIds = new Set(validatedProjects.map((p) => p.id));
 for (const skill of validatedSkills) {
   for (const projectId of skill.evidence) {
